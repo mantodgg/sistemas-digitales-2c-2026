@@ -11,31 +11,31 @@ VL_ATTR_COLD void Vcompuerta_misterios_tb___024root__trace_init_sub__TOP__0(Vcom
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     const int c = vlSymsp->__Vm_baseCode;
-    tracep->pushPrefix("compuerta_misterios_tb", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBit(c+7,0,"clk",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+8,0,"rst",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBus(c+1,0,"value",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 0,0);
-    tracep->declBit(c+1,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+2,0,"result",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+9,0,"pass",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+3,0,"done",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->pushPrefix("dut", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBit(c+1,0,"a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+2,0,"y",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->popPrefix();
-    tracep->pushPrefix("oracle", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+10,0,"N",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INTEGER, false,-1, 31,0);
-    tracep->declBit(c+11,0,"FAST_FAIL",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::BIT, false,-1);
-    tracep->declBit(c+7,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+8,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+9,0,"pass",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+3,0,"done",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBus(c+1,0,"value",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 0,0);
-    tracep->declBit(c+4,0,"dv",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+5,0,"tests_passing",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+6,0,"first",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->popPrefix();
-    tracep->popPrefix();
+    VL_TRACE_PUSH_PREFIX(tracep, "compuerta_misterios_tb", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BIT(tracep,c+7,0,"clk",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+8,0,"rst",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BUS(tracep,c+0,0,"value",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 0,0);
+    VL_TRACE_DECL_BIT(tracep,c+1,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+2,0,"result",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+9,0,"pass",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+3,0,"done",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_PUSH_PREFIX(tracep, "dut", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BIT(tracep,c+1,0,"a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+2,0,"y",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_POP_PREFIX(tracep);
+    VL_TRACE_PUSH_PREFIX(tracep, "oracle", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BUS(tracep,c+10,0,"N",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INTEGER, 31,0);
+    VL_TRACE_DECL_BIT(tracep,c+11,0,"FAST_FAIL",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::BIT);
+    VL_TRACE_DECL_BIT(tracep,c+7,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+8,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+9,0,"pass",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+3,0,"done",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BUS(tracep,c+0,0,"value",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, 0,0);
+    VL_TRACE_DECL_BIT(tracep,c+4,0,"dv",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+5,0,"tests_passing",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+6,0,"first",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_POP_PREFIX(tracep);
+    VL_TRACE_POP_PREFIX(tracep);
 }
 
 VL_ATTR_COLD void Vcompuerta_misterios_tb___024root__trace_init_top(Vcompuerta_misterios_tb___024root* vlSelf, VerilatedFst* tracep) {
@@ -99,6 +99,7 @@ VL_ATTR_COLD void Vcompuerta_misterios_tb___024root__trace_full_0_sub_0(Vcompuer
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
+    bufp->fullBit(oldp+0,(vlSelfRef.compuerta_misterios_tb__DOT__value));
     bufp->fullBit(oldp+1,(vlSelfRef.compuerta_misterios_tb__DOT__value));
     bufp->fullBit(oldp+2,((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__value)))));
     bufp->fullBit(oldp+3,(vlSelfRef.compuerta_misterios_tb__DOT__done));

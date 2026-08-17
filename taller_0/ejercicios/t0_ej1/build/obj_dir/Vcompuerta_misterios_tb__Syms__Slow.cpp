@@ -11,7 +11,7 @@ Vcompuerta_misterios_tb__Syms::Vcompuerta_misterios_tb__Syms(VerilatedContext* c
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(158);
+    Verilated::stackCheck(231);
     // Setup sub module instances
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);

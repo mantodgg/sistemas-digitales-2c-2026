@@ -4,7 +4,6 @@
 #include "Vcompuerta_misterios_tb___024root__0.cpp"
 #include "Vcompuerta_misterios_tb__main.cpp"
 #include "Vcompuerta_misterios_tb__Trace__0.cpp"
-#include "Vcompuerta_misterios_tb__ConstPool__0__Slow.cpp"
 #include "Vcompuerta_misterios_tb___024root__Slow.cpp"
 #include "Vcompuerta_misterios_tb___024root__0__Slow.cpp"
 #include "Vcompuerta_misterios_tb__Syms__Slow.cpp"

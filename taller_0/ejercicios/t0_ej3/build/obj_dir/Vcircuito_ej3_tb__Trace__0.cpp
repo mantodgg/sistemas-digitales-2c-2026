@@ -21,7 +21,7 @@ void Vcircuito_ej3_tb___024root__trace_chg_0_sub_0(Vcircuito_ej3_tb___024root* v
     Vcircuito_ej3_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
+    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 0);
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[1U]))) {
         bufp->chgCData(oldp+0,(vlSelfRef.circuito_ej3_tb__DOT__value),2);
         bufp->chgBit(oldp+1,((1U & ((IData)(vlSelfRef.circuito_ej3_tb__DOT__value) 
@@ -29,12 +29,8 @@ void Vcircuito_ej3_tb___024root__trace_chg_0_sub_0(Vcircuito_ej3_tb___024root* v
         bufp->chgBit(oldp+2,((1U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))));
         bufp->chgBit(oldp+3,((1U & ((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                                     | (IData)((2U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))))));
-        bufp->chgBit(oldp+4,((1U & ((2U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                     ? (~ (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                     : (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
-        bufp->chgBit(oldp+5,(((1U & ((2U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                      ? (~ (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                      : (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
+        bufp->chgBit(oldp+4,((1U & (6U >> (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
+        bufp->chgBit(oldp+5,(((1U & (6U >> (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                               == (1U & ((IData)((1U 
                                                  == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                                         | (IData)((2U 

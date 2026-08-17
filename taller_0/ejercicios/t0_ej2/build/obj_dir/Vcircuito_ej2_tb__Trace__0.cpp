@@ -21,7 +21,7 @@ void Vcircuito_ej2_tb___024root__trace_chg_0_sub_0(Vcircuito_ej2_tb___024root* v
     Vcircuito_ej2_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
+    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 0);
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[1U]))) {
         bufp->chgCData(oldp+0,(vlSelfRef.circuito_ej2_tb__DOT__value),3);
         bufp->chgBit(oldp+1,((1U & ((IData)(vlSelfRef.circuito_ej2_tb__DOT__value) 
@@ -29,13 +29,14 @@ void Vcircuito_ej2_tb___024root__trace_chg_0_sub_0(Vcircuito_ej2_tb___024root* v
         bufp->chgBit(oldp+2,((1U & ((IData)(vlSelfRef.circuito_ej2_tb__DOT__value) 
                                     >> 1U))));
         bufp->chgBit(oldp+3,((1U & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value))));
-        bufp->chgBit(oldp+4,((1U & ((IData)((6U == 
-                                             (6U & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value)))) 
-                                    | (IData)((1U == 
-                                               (5U 
-                                                & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value))))))));
+        bufp->chgBit(oldp+4,((1U & ((IData)((1U == 
+                                             (5U & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value)))) 
+                                    | (3U == (3U & 
+                                              ((IData)(vlSelfRef.circuito_ej2_tb__DOT__value) 
+                                               >> 1U)))))));
         bufp->chgBit(oldp+5,(vlSelfRef.circuito_ej2_tb__DOT__done));
-        bufp->chgBit(oldp+6,((IData)((6U == (6U & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value))))));
+        bufp->chgBit(oldp+6,((3U == (3U & ((IData)(vlSelfRef.circuito_ej2_tb__DOT__value) 
+                                           >> 1U)))));
         bufp->chgBit(oldp+7,((IData)((1U == (5U & (IData)(vlSelfRef.circuito_ej2_tb__DOT__value))))));
         bufp->chgBit(oldp+8,(vlSelfRef.circuito_ej2_tb__DOT__oracle__DOT__dv));
         bufp->chgBit(oldp+9,(vlSelfRef.circuito_ej2_tb__DOT__oracle__DOT__tests_passing));

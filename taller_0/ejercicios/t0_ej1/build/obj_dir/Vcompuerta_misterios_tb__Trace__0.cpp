@@ -21,17 +21,18 @@ void Vcompuerta_misterios_tb___024root__trace_chg_0_sub_0(Vcompuerta_misterios_t
     Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
+    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 0);
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[1U]))) {
         bufp->chgBit(oldp+0,(vlSelfRef.compuerta_misterios_tb__DOT__value));
-        bufp->chgBit(oldp+1,((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__value)))));
-        bufp->chgBit(oldp+2,(vlSelfRef.compuerta_misterios_tb__DOT__done));
-        bufp->chgBit(oldp+3,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv));
-        bufp->chgBit(oldp+4,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__tests_passing));
-        bufp->chgBit(oldp+5,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first));
+        bufp->chgBit(oldp+1,(vlSelfRef.compuerta_misterios_tb__DOT__value));
+        bufp->chgBit(oldp+2,((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__value)))));
+        bufp->chgBit(oldp+3,(vlSelfRef.compuerta_misterios_tb__DOT__done));
+        bufp->chgBit(oldp+4,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv));
+        bufp->chgBit(oldp+5,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__tests_passing));
+        bufp->chgBit(oldp+6,(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first));
     }
-    bufp->chgBit(oldp+6,(vlSelfRef.compuerta_misterios_tb__DOT__clk));
-    bufp->chgBit(oldp+7,(vlSelfRef.compuerta_misterios_tb__DOT__rst));
+    bufp->chgBit(oldp+7,(vlSelfRef.compuerta_misterios_tb__DOT__clk));
+    bufp->chgBit(oldp+8,(vlSelfRef.compuerta_misterios_tb__DOT__rst));
 }
 
 void Vcompuerta_misterios_tb___024root__trace_cleanup(void* voidSelf, VerilatedFst* /*unused*/) {

@@ -11,36 +11,36 @@ VL_ATTR_COLD void Vcircuito_ej3_tb___024root__trace_init_sub__TOP__0(Vcircuito_e
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     const int c = vlSymsp->__Vm_baseCode;
-    tracep->pushPrefix("circuito_ej3_tb", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBit(c+13,0,"clk",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+14,0,"rst",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBus(c+1,0,"value",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
-    tracep->declBit(c+2,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+3,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+4,0,"result",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+5,0,"exp",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+6,0,"pass",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+7,0,"done",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->pushPrefix("dut", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBit(c+2,0,"a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+3,0,"b",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+4,0,"y",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+8,0,"p",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+9,0,"q",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->popPrefix();
-    tracep->pushPrefix("oracle", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declBus(c+15,0,"N",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INTEGER, false,-1, 31,0);
-    tracep->declBit(c+16,0,"FAST_FAIL",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::BIT, false,-1);
-    tracep->declBit(c+13,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+14,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+6,0,"pass",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+7,0,"done",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBus(c+1,0,"value",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
-    tracep->declBit(c+10,0,"dv",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+11,0,"tests_passing",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+12,0,"first",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->popPrefix();
-    tracep->popPrefix();
+    VL_TRACE_PUSH_PREFIX(tracep, "circuito_ej3_tb", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BIT(tracep,c+12,0,"clk",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+13,0,"rst",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BUS(tracep,c+0,0,"value",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 1,0);
+    VL_TRACE_DECL_BIT(tracep,c+1,0,"a",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+2,0,"b",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+3,0,"result",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+4,0,"exp",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+5,0,"pass",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+6,0,"done",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_PUSH_PREFIX(tracep, "dut", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BIT(tracep,c+1,0,"a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+2,0,"b",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+3,0,"y",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+7,0,"p",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+8,0,"q",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_POP_PREFIX(tracep);
+    VL_TRACE_PUSH_PREFIX(tracep, "oracle", VerilatedTracePrefixType::SCOPE_MODULE, 0, 0);
+    VL_TRACE_DECL_BUS(tracep,c+14,0,"N",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INTEGER, 31,0);
+    VL_TRACE_DECL_BIT(tracep,c+15,0,"FAST_FAIL",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::BIT);
+    VL_TRACE_DECL_BIT(tracep,c+12,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+13,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+5,0,"pass",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+6,0,"done",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BUS(tracep,c+0,0,"value",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, 1,0);
+    VL_TRACE_DECL_BIT(tracep,c+9,0,"dv",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+10,0,"tests_passing",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_DECL_BIT(tracep,c+11,0,"first",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC);
+    VL_TRACE_POP_PREFIX(tracep);
+    VL_TRACE_POP_PREFIX(tracep);
 }
 
 VL_ATTR_COLD void Vcircuito_ej3_tb___024root__trace_init_top(Vcircuito_ej3_tb___024root* vlSelf, VerilatedFst* tracep) {
@@ -83,8 +83,8 @@ VL_ATTR_COLD void Vcircuito_ej3_tb___024root__trace_const_0_sub_0(Vcircuito_ej3_
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
-    bufp->fullIData(oldp+15,(2U),32);
-    bufp->fullBit(oldp+16,(0U));
+    bufp->fullIData(oldp+14,(2U),32);
+    bufp->fullBit(oldp+15,(0U));
 }
 
 VL_ATTR_COLD void Vcircuito_ej3_tb___024root__trace_full_0_sub_0(Vcircuito_ej3_tb___024root* vlSelf, VerilatedFst::Buffer* bufp);
@@ -103,27 +103,23 @@ VL_ATTR_COLD void Vcircuito_ej3_tb___024root__trace_full_0_sub_0(Vcircuito_ej3_t
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
-    bufp->fullCData(oldp+1,(vlSelfRef.circuito_ej3_tb__DOT__value),2);
-    bufp->fullBit(oldp+2,((1U & ((IData)(vlSelfRef.circuito_ej3_tb__DOT__value) 
+    bufp->fullCData(oldp+0,(vlSelfRef.circuito_ej3_tb__DOT__value),2);
+    bufp->fullBit(oldp+1,((1U & ((IData)(vlSelfRef.circuito_ej3_tb__DOT__value) 
                                  >> 1U))));
-    bufp->fullBit(oldp+3,((1U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))));
-    bufp->fullBit(oldp+4,((1U & ((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
+    bufp->fullBit(oldp+2,((1U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))));
+    bufp->fullBit(oldp+3,((1U & ((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                                  | (IData)((2U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))))));
-    bufp->fullBit(oldp+5,((1U & ((2U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                  ? (~ (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                  : (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
-    bufp->fullBit(oldp+6,(((1U & ((2U & (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                   ? (~ (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))
-                                   : (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
+    bufp->fullBit(oldp+4,((1U & (6U >> (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
+    bufp->fullBit(oldp+5,(((1U & (6U >> (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                            == (1U & ((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))) 
                                      | (IData)((2U 
                                                 == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value))))))));
-    bufp->fullBit(oldp+7,(vlSelfRef.circuito_ej3_tb__DOT__done));
-    bufp->fullBit(oldp+8,((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
-    bufp->fullBit(oldp+9,((IData)((2U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
-    bufp->fullBit(oldp+10,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__dv));
-    bufp->fullBit(oldp+11,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__tests_passing));
-    bufp->fullBit(oldp+12,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__first));
-    bufp->fullBit(oldp+13,(vlSelfRef.circuito_ej3_tb__DOT__clk));
-    bufp->fullBit(oldp+14,(vlSelfRef.circuito_ej3_tb__DOT__rst));
+    bufp->fullBit(oldp+6,(vlSelfRef.circuito_ej3_tb__DOT__done));
+    bufp->fullBit(oldp+7,((IData)((1U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
+    bufp->fullBit(oldp+8,((IData)((2U == (IData)(vlSelfRef.circuito_ej3_tb__DOT__value)))));
+    bufp->fullBit(oldp+9,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__dv));
+    bufp->fullBit(oldp+10,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__tests_passing));
+    bufp->fullBit(oldp+11,(vlSelfRef.circuito_ej3_tb__DOT__oracle__DOT__first));
+    bufp->fullBit(oldp+12,(vlSelfRef.circuito_ej3_tb__DOT__clk));
+    bufp->fullBit(oldp+13,(vlSelfRef.circuito_ej3_tb__DOT__rst));
 }

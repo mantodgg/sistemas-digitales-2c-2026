@@ -24,14 +24,19 @@ class alignas(VL_CACHE_LINE_BYTES) Vcompuerta_misterios_tb___024root final {
     CData/*0:0*/ compuerta_misterios_tb__DOT__oracle__DOT__first;
     CData/*0:0*/ __Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0;
-    CData/*0:0*/ __VactDidInit;
+    CData/*0:0*/ __VactPhaseResult;
+    CData/*0:0*/ __VinactPhaseResult;
+    CData/*0:0*/ __VnbaPhaseResult;
     IData/*31:0*/ __VactIterCount;
+    IData/*31:0*/ __VinactIterCount;
+    IData/*31:0*/ __Vi;
     VlUnpacked<QData/*63:0*/, 1> __VactTriggered;
+    VlUnpacked<QData/*63:0*/, 1> __VactTriggeredAcc;
     VlUnpacked<QData/*63:0*/, 1> __VnbaTriggered;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
-    VlTriggerScheduler __VtrigSched_hec0d6120__0;
-    VlTriggerScheduler __VtrigSched_h5c9a9c0a__0;
+    VlTriggerScheduler __VtrigSched_hd12641fc__0;
+    VlTriggerScheduler __VtrigSched_h3623d704__0;
 
     // INTERNAL VARIABLES
     Vcompuerta_misterios_tb__Syms* vlSymsp;

@@ -20,6 +20,8 @@ void Vcompuerta_misterios_tb___024root___eval_initial(Vcompuerta_misterios_tb___
     Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__3(vlSelf);
 }
 
+void Vcompuerta_misterios_tb___024root____VbeforeTrig_hd12641fc__0(Vcompuerta_misterios_tb___024root* vlSelf, const char* __VeventDescription);
+
 VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__0(Vcompuerta_misterios_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__0\n"); );
     Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
@@ -30,7 +32,9 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__0(Vc
     // Body
     compuerta_misterios_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 = 2U;
     while (VL_LTS_III(32, 0U, compuerta_misterios_tb__DOT__unnamedblk1_1__DOT____Vrepeat0)) {
-        co_await vlSelfRef.__VtrigSched_hec0d6120__0.trigger(0U, 
+        Vcompuerta_misterios_tb___024root____VbeforeTrig_hd12641fc__0(vlSelf, 
+                                                                      "@(posedge compuerta_misterios_tb.clk)");
+        co_await vlSelfRef.__VtrigSched_hd12641fc__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(posedge compuerta_misterios_tb.clk)", 
                                                              "compuerta_misterios_tb.sv", 
@@ -40,7 +44,10 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__0(Vc
                - (IData)(1U));
     }
     vlSelfRef.compuerta_misterios_tb__DOT__rst = 0U;
-    co_return;}
+    co_return;
+}
+
+void Vcompuerta_misterios_tb___024root____VbeforeTrig_h3623d704__0(Vcompuerta_misterios_tb___024root* vlSelf, const char* __VeventDescription);
 
 VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__1(Vcompuerta_misterios_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__1\n"); );
@@ -50,7 +57,9 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__1(Vc
     vlSymsp->_vm_contextp__->dumpfile("build/sim.fst"s);
     vlSymsp->_traceDumpOpen();
     while ((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__done)))) {
-        co_await vlSelfRef.__VtrigSched_h5c9a9c0a__0.trigger(1U, 
+        Vcompuerta_misterios_tb___024root____VbeforeTrig_h3623d704__0(vlSelf, 
+                                                                      "@( compuerta_misterios_tb.done)");
+        co_await vlSelfRef.__VtrigSched_h3623d704__0.trigger(1U, 
                                                              nullptr, 
                                                              "@( compuerta_misterios_tb.done)", 
                                                              "compuerta_misterios_tb.sv", 
@@ -60,7 +69,8 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__1(Vc
                                          "compuerta_misterios_tb.sv", 
                                          50);
     VL_FINISH_MT("compuerta_misterios_tb.sv", 51, "");
-    co_return;}
+    co_return;
+}
 
 VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__2(Vcompuerta_misterios_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__2\n"); );
@@ -68,10 +78,12 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__2(Vc
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     while ((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__done)))) {
-        co_await vlSelfRef.__VtrigSched_h5c9a9c0a__0.trigger(1U, 
+        Vcompuerta_misterios_tb___024root____VbeforeTrig_h3623d704__0(vlSelf, 
+                                                                      "@( compuerta_misterios_tb.done)");
+        co_await vlSelfRef.__VtrigSched_h3623d704__0.trigger(1U, 
                                                              nullptr, 
                                                              "@( compuerta_misterios_tb.done)", 
-                                                             "/home/Estudiante/Descargas/hdl_studio_taller_zero/ejercicios/lib/oracle_tb.sv", 
+                                                             "/workspaces/sistemas-digitales-2c-2026/taller_0/ejercicios/lib/oracle_tb.sv", 
                                                              44);
     }
     if (vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__tests_passing) {
@@ -79,7 +91,8 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__2(Vc
     } else {
         VL_WRITEF_NX("\n\033[1;31m\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\n  \342\234\227  FAIL: hubo tests que fallaron\n\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\342\224\201\033[0m\n\n",0);
     }
-    co_return;}
+    co_return;
+}
 
 VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__3(Vcompuerta_misterios_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__3\n"); );
@@ -94,39 +107,7 @@ VlCoroutine Vcompuerta_misterios_tb___024root___eval_initial__TOP__Vtiming__3(Vc
         vlSelfRef.compuerta_misterios_tb__DOT__clk 
             = (1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__clk)));
     }
-    co_return;}
-
-#ifdef VL_DEBUG
-VL_ATTR_COLD void Vcompuerta_misterios_tb___024root___dump_triggers__act(const VlUnpacked<QData/*63:0*/, 1> &triggers, const std::string &tag);
-#endif  // VL_DEBUG
-
-void Vcompuerta_misterios_tb___024root___eval_triggers__act(Vcompuerta_misterios_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_triggers__act\n"); );
-    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.__VactTriggered[0U] = (QData)((IData)(
-                                                    ((vlSelfRef.__VdlySched.awaitingCurrentTime() 
-                                                      << 2U) 
-                                                     | ((((IData)(vlSelfRef.compuerta_misterios_tb__DOT__done) 
-                                                          != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0)) 
-                                                         << 1U) 
-                                                        | ((IData)(vlSelfRef.compuerta_misterios_tb__DOT__clk) 
-                                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0)))))));
-    vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0 
-        = vlSelfRef.compuerta_misterios_tb__DOT__clk;
-    vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0 
-        = vlSelfRef.compuerta_misterios_tb__DOT__done;
-    if (VL_UNLIKELY(((1U & (~ (IData)(vlSelfRef.__VactDidInit)))))) {
-        vlSelfRef.__VactDidInit = 1U;
-        vlSelfRef.__VactTriggered[0U] = (2ULL | vlSelfRef.__VactTriggered
-                                         [0U]);
-    }
-#ifdef VL_DEBUG
-    if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
-        Vcompuerta_misterios_tb___024root___dump_triggers__act(vlSelfRef.__VactTriggered, "act"s);
-    }
-#endif
+    co_return;
 }
 
 bool Vcompuerta_misterios_tb___024root___trigger_anySet__act(const VlUnpacked<QData/*63:0*/, 1> &in) {
@@ -144,80 +125,16 @@ bool Vcompuerta_misterios_tb___024root___trigger_anySet__act(const VlUnpacked<QD
     return (0U);
 }
 
-extern const VlUnpacked<CData/*4:0*/, 16> Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0;
-extern const VlUnpacked<CData/*0:0*/, 16> Vcompuerta_misterios_tb__ConstPool__TABLE_he4614b46_0;
-extern const VlUnpacked<CData/*0:0*/, 16> Vcompuerta_misterios_tb__ConstPool__TABLE_h003b04dc_0;
-extern const VlUnpacked<CData/*0:0*/, 16> Vcompuerta_misterios_tb__ConstPool__TABLE_h203707d0_0;
-extern const VlUnpacked<CData/*0:0*/, 16> Vcompuerta_misterios_tb__ConstPool__TABLE_hce92076c_0;
-
-void Vcompuerta_misterios_tb___024root___nba_sequent__TOP__0(Vcompuerta_misterios_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___nba_sequent__TOP__0\n"); );
-    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Locals
-    CData/*3:0*/ __Vtableidx1;
-    __Vtableidx1 = 0;
-    // Body
-    __Vtableidx1 = ((((IData)(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first) 
-                      << 3U) | ((IData)(vlSelfRef.compuerta_misterios_tb__DOT__value) 
-                                << 2U)) | (((IData)(vlSelfRef.compuerta_misterios_tb__DOT__done) 
-                                            << 1U) 
-                                           | (IData)(vlSelfRef.compuerta_misterios_tb__DOT__rst)));
-    if ((1U & Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0
-         [__Vtableidx1])) {
-        vlSelfRef.compuerta_misterios_tb__DOT__value 
-            = Vcompuerta_misterios_tb__ConstPool__TABLE_he4614b46_0
-            [__Vtableidx1];
-    }
-    if ((2U & Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0
-         [__Vtableidx1])) {
-        vlSelfRef.compuerta_misterios_tb__DOT__done 
-            = Vcompuerta_misterios_tb__ConstPool__TABLE_h003b04dc_0
-            [__Vtableidx1];
-    }
-    if ((4U & Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0
-         [__Vtableidx1])) {
-        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv 
-            = Vcompuerta_misterios_tb__ConstPool__TABLE_h203707d0_0
-            [__Vtableidx1];
-    }
-    if ((8U & Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0
-         [__Vtableidx1])) {
-        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__tests_passing 
-            = Vcompuerta_misterios_tb__ConstPool__TABLE_hce92076c_0
-            [__Vtableidx1];
-    }
-    if ((0x10U & Vcompuerta_misterios_tb__ConstPool__TABLE_h5f1a6736_0
-         [__Vtableidx1])) {
-        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first 
-            = Vcompuerta_misterios_tb__ConstPool__TABLE_hce92076c_0
-            [__Vtableidx1];
-    }
-}
-
-void Vcompuerta_misterios_tb___024root___eval_nba(Vcompuerta_misterios_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_nba\n"); );
+void Vcompuerta_misterios_tb___024root___timing_ready(Vcompuerta_misterios_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___timing_ready\n"); );
     Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((1ULL & vlSelfRef.__VnbaTriggered[0U])) {
-        Vcompuerta_misterios_tb___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[1U] = 1U;
+    if ((1ULL & vlSelfRef.__VactTriggered[0U])) {
+        vlSelfRef.__VtrigSched_hd12641fc__0.ready("@(posedge compuerta_misterios_tb.clk)");
     }
-}
-
-void Vcompuerta_misterios_tb___024root___timing_commit(Vcompuerta_misterios_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___timing_commit\n"); );
-    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    if ((! (1ULL & vlSelfRef.__VactTriggered[0U]))) {
-        vlSelfRef.__VtrigSched_hec0d6120__0.commit(
-                                                   "@(posedge compuerta_misterios_tb.clk)");
-    }
-    if ((! (2ULL & vlSelfRef.__VactTriggered[0U]))) {
-        vlSelfRef.__VtrigSched_h5c9a9c0a__0.commit(
-                                                   "@( compuerta_misterios_tb.done)");
+    if ((2ULL & vlSelfRef.__VactTriggered[0U])) {
+        vlSelfRef.__VtrigSched_h3623d704__0.ready("@( compuerta_misterios_tb.done)");
     }
 }
 
@@ -226,21 +143,19 @@ void Vcompuerta_misterios_tb___024root___timing_resume(Vcompuerta_misterios_tb__
     Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((1ULL & vlSelfRef.__VactTriggered[0U])) {
-        vlSelfRef.__VtrigSched_hec0d6120__0.resume(
-                                                   "@(posedge compuerta_misterios_tb.clk)");
-    }
-    if ((2ULL & vlSelfRef.__VactTriggered[0U])) {
-        vlSelfRef.__VtrigSched_h5c9a9c0a__0.resume(
-                                                   "@( compuerta_misterios_tb.done)");
-    }
+    vlSelfRef.__VtrigSched_hd12641fc__0.moveToResumeQueue(
+                                                          "@(posedge compuerta_misterios_tb.clk)");
+    vlSelfRef.__VtrigSched_h3623d704__0.moveToResumeQueue(
+                                                          "@( compuerta_misterios_tb.done)");
+    vlSelfRef.__VtrigSched_hd12641fc__0.resume("@(posedge compuerta_misterios_tb.clk)");
+    vlSelfRef.__VtrigSched_h3623d704__0.resume("@( compuerta_misterios_tb.done)");
     if ((4ULL & vlSelfRef.__VactTriggered[0U])) {
         vlSelfRef.__VdlySched.resume();
     }
 }
 
-void Vcompuerta_misterios_tb___024root___trigger_orInto__act(VlUnpacked<QData/*63:0*/, 1> &out, const VlUnpacked<QData/*63:0*/, 1> &in) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___trigger_orInto__act\n"); );
+void Vcompuerta_misterios_tb___024root___trigger_orInto__act_vec_vec(VlUnpacked<QData/*63:0*/, 1> &out, const VlUnpacked<QData/*63:0*/, 1> &in) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___trigger_orInto__act_vec_vec\n"); );
     // Locals
     IData/*31:0*/ n;
     // Body
@@ -248,8 +163,12 @@ void Vcompuerta_misterios_tb___024root___trigger_orInto__act(VlUnpacked<QData/*6
     do {
         out[n] = (out[n] | in[n]);
         n = ((IData)(1U) + n);
-    } while ((1U > n));
+    } while ((0U >= n));
 }
+
+#ifdef VL_DEBUG
+VL_ATTR_COLD void Vcompuerta_misterios_tb___024root___dump_triggers__act(const VlUnpacked<QData/*63:0*/, 1> &triggers, const std::string &tag);
+#endif  // VL_DEBUG
 
 bool Vcompuerta_misterios_tb___024root___eval_phase__act(Vcompuerta_misterios_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_phase__act\n"); );
@@ -258,14 +177,49 @@ bool Vcompuerta_misterios_tb___024root___eval_phase__act(Vcompuerta_misterios_tb
     // Locals
     CData/*0:0*/ __VactExecute;
     // Body
-    Vcompuerta_misterios_tb___024root___eval_triggers__act(vlSelf);
-    Vcompuerta_misterios_tb___024root___timing_commit(vlSelf);
-    Vcompuerta_misterios_tb___024root___trigger_orInto__act(vlSelfRef.__VnbaTriggered, vlSelfRef.__VactTriggered);
+    {
+        // Inlined CFunc: _eval_triggers_vec__act
+        vlSelfRef.__VactTriggered[0U] = (QData)((IData)(
+                                                        ((vlSelfRef.__VdlySched.awaitingCurrentTime() 
+                                                          << 2U) 
+                                                         | ((((IData)(vlSelfRef.compuerta_misterios_tb__DOT__done) 
+                                                              != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0)) 
+                                                             << 1U) 
+                                                            | ((IData)(vlSelfRef.compuerta_misterios_tb__DOT__clk) 
+                                                               & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0)))))));
+        vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0 
+            = vlSelfRef.compuerta_misterios_tb__DOT__clk;
+        vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0 
+            = vlSelfRef.compuerta_misterios_tb__DOT__done;
+    }
+    Vcompuerta_misterios_tb___024root___timing_ready(vlSelf);
+    Vcompuerta_misterios_tb___024root___trigger_orInto__act_vec_vec(vlSelfRef.__VactTriggered, vlSelfRef.__VactTriggeredAcc);
+#ifdef VL_DEBUG
+    if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
+        Vcompuerta_misterios_tb___024root___dump_triggers__act(vlSelfRef.__VactTriggered, "act"s);
+    }
+#endif
+    Vcompuerta_misterios_tb___024root___trigger_orInto__act_vec_vec(vlSelfRef.__VnbaTriggered, vlSelfRef.__VactTriggered);
     __VactExecute = Vcompuerta_misterios_tb___024root___trigger_anySet__act(vlSelfRef.__VactTriggered);
     if (__VactExecute) {
+        vlSelfRef.__VactTriggeredAcc.fill(0ULL);
         Vcompuerta_misterios_tb___024root___timing_resume(vlSelf);
     }
     return (__VactExecute);
+}
+
+bool Vcompuerta_misterios_tb___024root___eval_phase__inact(Vcompuerta_misterios_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root___eval_phase__inact\n"); );
+    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Locals
+    CData/*0:0*/ __VinactExecute;
+    // Body
+    __VinactExecute = vlSelfRef.__VdlySched.awaitingZeroDelay();
+    if (__VinactExecute) {
+        VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "ZERODLY: Design Verilated with '--no-sched-zero-delay', but #0 delay executed at runtime");
+    }
+    return (__VinactExecute);
 }
 
 void Vcompuerta_misterios_tb___024root___trigger_clear__act(VlUnpacked<QData/*63:0*/, 1> &out) {
@@ -289,7 +243,51 @@ bool Vcompuerta_misterios_tb___024root___eval_phase__nba(Vcompuerta_misterios_tb
     // Body
     __VnbaExecute = Vcompuerta_misterios_tb___024root___trigger_anySet__act(vlSelfRef.__VnbaTriggered);
     if (__VnbaExecute) {
-        Vcompuerta_misterios_tb___024root___eval_nba(vlSelf);
+        {
+            // Inlined CFunc: _eval_nba
+            if ((1ULL & vlSelfRef.__VnbaTriggered[0U])) {
+                {
+                    // Inlined CFunc: _nba_sequent__TOP__0
+                    CData/*0:0*/ __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value = 0;
+                    CData/*0:0*/ __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done = 0;
+                    CData/*0:0*/ __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first = 0;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value 
+                        = vlSelfRef.compuerta_misterios_tb__DOT__value;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done 
+                        = vlSelfRef.compuerta_misterios_tb__DOT__done;
+                    __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first 
+                        = vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first;
+                    if (vlSelfRef.compuerta_misterios_tb__DOT__rst) {
+                        __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value = 1U;
+                        __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done = 0U;
+                        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv = 0U;
+                        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__tests_passing = 1U;
+                        __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first = 1U;
+                    } else if ((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__done)))) {
+                        __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value 
+                            = (1U & ((IData)(1U) + (IData)(vlSelfRef.compuerta_misterios_tb__DOT__value)));
+                        vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv = 1U;
+                        if ((1U & (~ (IData)(vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first)))) {
+                            if (vlSelfRef.compuerta_misterios_tb__DOT__value) {
+                                __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done = 1U;
+                                vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__dv = 0U;
+                            }
+                        }
+                        __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first = 0U;
+                    }
+                    vlSelfRef.compuerta_misterios_tb__DOT__value 
+                        = __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__value;
+                    vlSelfRef.compuerta_misterios_tb__DOT__done 
+                        = __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__done;
+                    vlSelfRef.compuerta_misterios_tb__DOT__oracle__DOT__first 
+                        = __Vinline_0__eval_nba___Vinline_0__nba_sequent__TOP__0___Vdly__compuerta_misterios_tb__DOT__oracle__DOT__first;
+                }
+                vlSelfRef.__Vm_traceActivity[1U] = 1U;
+            }
+        }
         Vcompuerta_misterios_tb___024root___trigger_clear__act(vlSelfRef.__VnbaTriggered);
     }
     return (__VnbaExecute);
@@ -304,25 +302,74 @@ void Vcompuerta_misterios_tb___024root___eval(Vcompuerta_misterios_tb___024root*
     // Body
     __VnbaIterCount = 0U;
     do {
-        if (VL_UNLIKELY(((0x00000064U < __VnbaIterCount)))) {
+        if (VL_UNLIKELY(((0x00002710U < __VnbaIterCount)))) {
 #ifdef VL_DEBUG
             Vcompuerta_misterios_tb___024root___dump_triggers__act(vlSelfRef.__VnbaTriggered, "nba"s);
 #endif
-            VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "NBA region did not converge after 100 tries");
+            VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "DIDNOTCONVERGE: NBA region did not converge after '--converge-limit' of 10000 tries");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
-        vlSelfRef.__VactIterCount = 0U;
+        vlSelfRef.__VinactIterCount = 0U;
         do {
-            if (VL_UNLIKELY(((0x00000064U < vlSelfRef.__VactIterCount)))) {
-#ifdef VL_DEBUG
-                Vcompuerta_misterios_tb___024root___dump_triggers__act(vlSelfRef.__VactTriggered, "act"s);
-#endif
-                VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "Active region did not converge after 100 tries");
+            if (VL_UNLIKELY(((0x00002710U < vlSelfRef.__VinactIterCount)))) {
+                VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "DIDNOTCONVERGE: Inactive region did not converge after '--converge-limit' of 10000 tries");
             }
-            vlSelfRef.__VactIterCount = ((IData)(1U) 
-                                         + vlSelfRef.__VactIterCount);
-        } while (Vcompuerta_misterios_tb___024root___eval_phase__act(vlSelf));
-    } while (Vcompuerta_misterios_tb___024root___eval_phase__nba(vlSelf));
+            vlSelfRef.__VinactIterCount = ((IData)(1U) 
+                                           + vlSelfRef.__VinactIterCount);
+            vlSelfRef.__VactIterCount = 0U;
+            do {
+                if (VL_UNLIKELY(((0x00002710U < vlSelfRef.__VactIterCount)))) {
+#ifdef VL_DEBUG
+                    Vcompuerta_misterios_tb___024root___dump_triggers__act(vlSelfRef.__VactTriggered, "act"s);
+#endif
+                    VL_FATAL_MT("compuerta_misterios_tb.sv", 3, "", "DIDNOTCONVERGE: Active region did not converge after '--converge-limit' of 10000 tries");
+                }
+                vlSelfRef.__VactIterCount = ((IData)(1U) 
+                                             + vlSelfRef.__VactIterCount);
+                vlSelfRef.__VactPhaseResult = Vcompuerta_misterios_tb___024root___eval_phase__act(vlSelf);
+            } while (vlSelfRef.__VactPhaseResult);
+            vlSelfRef.__VinactPhaseResult = Vcompuerta_misterios_tb___024root___eval_phase__inact(vlSelf);
+        } while (vlSelfRef.__VinactPhaseResult);
+        vlSelfRef.__VnbaPhaseResult = Vcompuerta_misterios_tb___024root___eval_phase__nba(vlSelf);
+    } while (vlSelfRef.__VnbaPhaseResult);
+}
+
+void Vcompuerta_misterios_tb___024root____VbeforeTrig_hd12641fc__0(Vcompuerta_misterios_tb___024root* vlSelf, const char* __VeventDescription) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root____VbeforeTrig_hd12641fc__0\n"); );
+    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Locals
+    VlUnpacked<QData/*63:0*/, 1> __VTmp;
+    // Body
+    __VTmp[0U] = (QData)((IData)(((IData)(vlSelfRef.compuerta_misterios_tb__DOT__clk) 
+                                  & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0)))));
+    vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__clk__0 
+        = vlSelfRef.compuerta_misterios_tb__DOT__clk;
+    if ((1ULL & __VTmp[0U])) {
+        vlSelfRef.__VtrigSched_hd12641fc__0.ready(__VeventDescription);
+    }
+    vlSelfRef.__VactTriggeredAcc[0U] = (vlSelfRef.__VactTriggeredAcc[0U] 
+                                        | __VTmp[0U]);
+}
+
+void Vcompuerta_misterios_tb___024root____VbeforeTrig_h3623d704__0(Vcompuerta_misterios_tb___024root* vlSelf, const char* __VeventDescription) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcompuerta_misterios_tb___024root____VbeforeTrig_h3623d704__0\n"); );
+    Vcompuerta_misterios_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Locals
+    VlUnpacked<QData/*63:0*/, 1> __VTmp;
+    // Body
+    __VTmp[0U] = (QData)((IData)((((IData)(vlSelfRef.compuerta_misterios_tb__DOT__done) 
+                                   != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0)) 
+                                  << 1U)));
+    vlSelfRef.__Vtrigprevexpr___TOP__compuerta_misterios_tb__DOT__done__0 
+        = vlSelfRef.compuerta_misterios_tb__DOT__done;
+    if ((2ULL & __VTmp[0U])) {
+        vlSelfRef.__VtrigSched_h3623d704__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_h3623d704__0.ready(__VeventDescription);
+    }
+    vlSelfRef.__VactTriggeredAcc[0U] = (vlSelfRef.__VactTriggeredAcc[0U] 
+                                        | __VTmp[0U]);
 }
 
 #ifdef VL_DEBUG

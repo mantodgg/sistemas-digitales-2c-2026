@@ -4,7 +4,6 @@
 #include "Vcircuito_ej2_tb___024root__0.cpp"
 #include "Vcircuito_ej2_tb__main.cpp"
 #include "Vcircuito_ej2_tb__Trace__0.cpp"
-#include "Vcircuito_ej2_tb__ConstPool__0__Slow.cpp"
 #include "Vcircuito_ej2_tb___024root__Slow.cpp"
 #include "Vcircuito_ej2_tb___024root__0__Slow.cpp"
 #include "Vcircuito_ej2_tb__Syms__Slow.cpp"

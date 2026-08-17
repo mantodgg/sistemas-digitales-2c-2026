@@ -11,7 +11,7 @@ Vcircuito_ej2_tb__Syms::Vcircuito_ej2_tb__Syms(VerilatedContext* contextp, const
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(158);
+    Verilated::stackCheck(231);
     // Setup sub module instances
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
