@@ -49,7 +49,7 @@ VL_ATTR_COLD void Vsim_top___024root___eval_settle(Vsim_top___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vsim_top___024root___dump_triggers__stl(vlSelfRef.__VstlTriggered, "stl"s);
 #endif
-            VL_FATAL_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Settle region did not converge after '--converge-limit' of 10000 tries");
+            VL_FATAL_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Settle region did not converge after '--converge-limit' of 10000 tries");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         vlSelfRef.__VstlPhaseResult = Vsim_top___024root___eval_phase__stl(vlSelf);

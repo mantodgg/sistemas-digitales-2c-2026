@@ -4,4 +4,5 @@ module inversor_cond (
     output logic [3:0] y
 );
   // completar
-endmodule
+    assign y = ctrl ? ~x : x; //literalmente si ctrl es 0 entonces es 
+endmodule                     //el inverso de x (NOT x) y si es 1, x.

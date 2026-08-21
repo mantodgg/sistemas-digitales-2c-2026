@@ -43,7 +43,7 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__0(Vsim_top___024roo
         co_await vlSelfRef.__VtrigSched_hffd278f5__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(posedge sim_top.clk)", 
-                                                             "/workspaces/taller1/ejercicios/lib/sim_top.sv", 
+                                                             "/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 
                                                              16);
         sim_top__DOT__unnamedblk1_1__DOT____Vrepeat0 
             = (sim_top__DOT__unnamedblk1_1__DOT____Vrepeat0 
@@ -56,7 +56,7 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__0(Vsim_top___024roo
         co_await vlSelfRef.__VtrigSched_hde298250__0.trigger(1U, 
                                                              nullptr, 
                                                              "@( sim_top.done)", 
-                                                             "/workspaces/taller1/ejercicios/lib/sim_top.sv", 
+                                                             "/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 
                                                              18);
     }
     sim_top__DOT__unnamedblk1_2__DOT____Vrepeat1 = 2U;
@@ -66,7 +66,7 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__0(Vsim_top___024roo
         co_await vlSelfRef.__VtrigSched_hffd278f5__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(posedge sim_top.clk)", 
-                                                             "/workspaces/taller1/ejercicios/lib/sim_top.sv", 
+                                                             "/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 
                                                              19);
         sim_top__DOT__unnamedblk1_2__DOT____Vrepeat1 
             = (sim_top__DOT__unnamedblk1_2__DOT____Vrepeat1 
@@ -75,9 +75,9 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__0(Vsim_top___024roo
     if (VL_UNLIKELY(((1U & (~ (IData)(vlSelfRef.sim_top__DOT__tb__DOT__oracle__DOT__tests_passing)))))) {
         VL_WRITEF_NX("[%0t] %%Fatal: sim_top.sv:20: Assertion failed in %m: Hubo tests que fallaron\n",3, 'M',vlSymsp->name(),"sim_top", 'T',-12
                      , '#',64,VL_TIME_UNITED_Q(1));
-        VL_STOP_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 20, "", false);
+        VL_STOP_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 20, "", false);
     }
-    VL_FINISH_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 21, "");
+    VL_FINISH_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 21, "");
     co_return;
 }
 
@@ -92,7 +92,7 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__1(Vsim_top___024roo
         co_await vlSelfRef.__VtrigSched_hde298250__0.trigger(1U, 
                                                              nullptr, 
                                                              "@( sim_top.done)", 
-                                                             "/workspaces/taller1/ejercicios/lib/oracle_tb.sv", 
+                                                             "/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/oracle_tb.sv", 
                                                              47);
     }
     if (vlSelfRef.sim_top__DOT__tb__DOT__oracle__DOT__tests_passing) {
@@ -111,7 +111,7 @@ VlCoroutine Vsim_top___024root___eval_initial__TOP__Vtiming__2(Vsim_top___024roo
     while (VL_LIKELY(!vlSymsp->_vm_contextp__->gotFinish())) {
         co_await vlSelfRef.__VdlySched.delay(5ULL, 
                                              nullptr, 
-                                             "/workspaces/taller1/ejercicios/lib/sim_top.sv", 
+                                             "/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 
                                              12);
         vlSelfRef.sim_top__DOT__clk = (1U & (~ (IData)(vlSelfRef.sim_top__DOT__clk)));
     }
@@ -329,7 +329,7 @@ bool Vsim_top___024root___eval_phase__inact(Vsim_top___024root* vlSelf) {
     // Body
     __VinactExecute = vlSelfRef.__VdlySched.awaitingZeroDelay();
     if (__VinactExecute) {
-        VL_FATAL_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 5, "", "ZERODLY: Design Verilated with '--no-sched-zero-delay', but #0 delay executed at runtime");
+        VL_FATAL_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 5, "", "ZERODLY: Design Verilated with '--no-sched-zero-delay', but #0 delay executed at runtime");
     }
     return (__VinactExecute);
 }
@@ -379,13 +379,13 @@ void Vsim_top___024root___eval(Vsim_top___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vsim_top___024root___dump_triggers__act(vlSelfRef.__VnbaTriggered, "nba"s);
 #endif
-            VL_FATAL_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: NBA region did not converge after '--converge-limit' of 10000 tries");
+            VL_FATAL_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: NBA region did not converge after '--converge-limit' of 10000 tries");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         vlSelfRef.__VinactIterCount = 0U;
         do {
             if (VL_UNLIKELY(((0x00002710U < vlSelfRef.__VinactIterCount)))) {
-                VL_FATAL_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Inactive region did not converge after '--converge-limit' of 10000 tries");
+                VL_FATAL_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Inactive region did not converge after '--converge-limit' of 10000 tries");
             }
             vlSelfRef.__VinactIterCount = ((IData)(1U) 
                                            + vlSelfRef.__VinactIterCount);
@@ -395,7 +395,7 @@ void Vsim_top___024root___eval(Vsim_top___024root* vlSelf) {
 #ifdef VL_DEBUG
                     Vsim_top___024root___dump_triggers__act(vlSelfRef.__VactTriggered, "act"s);
 #endif
-                    VL_FATAL_MT("/workspaces/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Active region did not converge after '--converge-limit' of 10000 tries");
+                    VL_FATAL_MT("/workspaces/sistemas-digitales-2c-2026/taller1/ejercicios/lib/sim_top.sv", 5, "", "DIDNOTCONVERGE: Active region did not converge after '--converge-limit' of 10000 tries");
                 }
                 vlSelfRef.__VactIterCount = ((IData)(1U) 
                                              + vlSelfRef.__VactIterCount);
