@@ -12,4 +12,37 @@ module datapath_sumador (
 );
   // tres registro_4b + sumador_4b (cin=0)
   // R_a y R_b cargan force_in; R_s carga la suma
+  logic [3:0] suma;
+
+  registro_4b registro_r_a (
+    .clk(clk),
+    .rst(rst),
+    .we (we_a),
+    .din(force_in),
+    .q  (r_a)
+  );
+
+  registro_4b registro_r_b (
+    .clk(clk),
+    .rst(rst),
+    .we (we_b),
+    .din(force_in),
+    .q  (r_b)
+  );
+  
+  registro_4b registro_r_s (
+    .clk(clk),
+    .rst(rst),
+    .we (we_s),
+    .din(suma),
+    .q  (r_s)
+  );
+
+  sumador_4b sumador (
+    .a   (r_a),
+    .b   (r_b),
+    .cin (0),
+    .sum (suma),
+    .cout(cout)
+  );
 endmodule
