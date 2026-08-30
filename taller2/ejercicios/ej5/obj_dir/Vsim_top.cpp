@@ -140,6 +140,6 @@ VL_ATTR_COLD void Vsim_top::traceBaseModel(VerilatedTraceBaseC* tfp, int levels,
             " use --trace-fst with VerilatedFst object, and --trace-vcd with VerilatedVcd object");
     }
     stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 16);
+    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 63);
     Vsim_top___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
 }
