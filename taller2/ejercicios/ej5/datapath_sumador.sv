@@ -10,8 +10,8 @@ module datapath_sumador (
     output logic [3:0] r_s,
     output logic       cout
 );
-  // tres registro_4b + sumador_4b (cin=0)
-  // R_a y R_b cargan force_in; R_s carga la suma
+  //basicamente hacemos el registro de a y de b y luego los sumamos. luego de sumarlos hacemos 
+  //el registro del resultado, lo nombramos s. (por eso tenemos 3 registros y una suma)
   logic [3:0] suma;
 
   registro_4b registro_r_a (
@@ -19,7 +19,7 @@ module datapath_sumador (
     .rst(rst),
     .we (we_a),
     .din(force_in),
-    .q  (r_a)
+    .q  (r_a) 
   );
 
   registro_4b registro_r_b (
