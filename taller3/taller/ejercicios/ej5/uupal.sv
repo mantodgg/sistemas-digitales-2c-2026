@@ -22,6 +22,72 @@ module uupal (
     output logic [3:0] or_value,
     output logic [3:0] result
 );
+  logic [3:0]bus_a, bus_b;
+
+  assign bus_a = 
+    (src_a == 2'b00) ? r0 : 
+    (src_a == 2'b01) ? r1 :
+    (src_a == 2'b10) ? r2 :
+    r3;
+
+  assign bus_b =
+    (src_b == 2'b00) ? r0 : 
+    (src_b == 2'b01) ? r1 :
+    (src_b == 2'b10) ? r2 :
+    r3;
+
+  registro_4b registro_4b_a (
+    .clk(clk),
+    .rst(rst),
+    .we (load_op_a),
+    .din(bus_a),
+    .q  (operand_a)
+  );
+
+  registro_4b registro_4b_b (
+    .clk(clk),
+    .rst(rst),
+    .we (load_op_b),
+    .din(bus_b),
+    .q  (operand_b)
+  );
+
+  compuerta_and_4b compuerta_and_4b (
+    .a     (operand_a),
+    .b     (operand_b),
+    .result(and_value)
+  );
+  
+  compuerta_or_4b compuerta_or_4b (
+    .a     (operand_a),
+    .b     (operand_b),
+    .result(or_value)
+  );
+
+  sumador_4b sumador_4b (
+    .a   (operand_a),
+    .b   (operand_b),
+    .cin (0),
+    .sum (sum),
+    .cout(cout)
+  );
+
+  restador_4b restador_4b (
+    .a   (operand_a),
+    .b   (operand_b),
+    .bin (0),
+    .diff(diff),
+    .bout(bout)
+  );
+
+  
+
+
+
+  endmodule
+
+  
+
   // Completar de manera estructural:
   // 1. mux src_a -> bus de lectura A; mux src_b -> bus de lectura B;
   // 2. registros operand_a y operand_b (load_op_a / load_op_b);
@@ -29,4 +95,5 @@ module uupal (
   // 4. mux op -> result;
   // 5. mux force_en: force_in vs result -> bus de escritura;
   // 6. cuatro registro_4b (r0..r3) con we0..we3.;
-endmodule
+
+
