@@ -96,7 +96,7 @@ module uupal (
     .clk(clk),
     .rst(rst),
     .we (we0),
-    .din(),
+    .din(bus_escritura),
     .q  (r0)
   );  
 
@@ -104,7 +104,7 @@ module uupal (
     .clk(clk),
     .rst(rst),
     .we (we1),
-    .din(),
+    .din(bus_escritura),
     .q  (r1)
   );
 
@@ -112,7 +112,7 @@ module uupal (
     .clk(clk),
     .rst(rst),
     .we (we2),
-    .din(),
+    .din(bus_escritura),
     .q  (r2)
   );
 
@@ -120,7 +120,7 @@ module uupal (
     .clk(clk),
     .rst(rst),
     .we (we3),
-    .din(),
+    .din(bus_escritura),
     .q  (r3)
   );
 
