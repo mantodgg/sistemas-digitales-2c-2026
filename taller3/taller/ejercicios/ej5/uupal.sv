@@ -23,6 +23,9 @@ module uupal (
     output logic [3:0] result
 );
   logic [3:0]bus_a, bus_b;
+  logic [3:0]sum_value,diff_value;
+  logic cout,bout;
+  logic [3:0]bus_escritura;
 
   assign bus_a = 
     (src_a == 2'b00) ? r0 : 
@@ -36,7 +39,7 @@ module uupal (
     (src_b == 2'b10) ? r2 :
     r3;
 
-  registro_4b registro_4b_a (
+  registro_4b registro_4b_bus_a (
     .clk(clk),
     .rst(rst),
     .we (load_op_a),
@@ -44,7 +47,7 @@ module uupal (
     .q  (operand_a)
   );
 
-  registro_4b registro_4b_b (
+  registro_4b registro_4b_bus_b (
     .clk(clk),
     .rst(rst),
     .we (load_op_b),
@@ -68,7 +71,7 @@ module uupal (
     .a   (operand_a),
     .b   (operand_b),
     .cin (0),
-    .sum (sum),
+    .sum (sum_value),
     .cout(cout)
   );
 
@@ -76,13 +79,50 @@ module uupal (
     .a   (operand_a),
     .b   (operand_b),
     .bin (0),
-    .diff(diff),
+    .diff(diff_value),
     .bout(bout)
   );
 
-  
+  assign result = 
+    (op == 2'b00) ? and_value :
+    (op == 2'b01) ? or_value :
+    (op == 2'b10) ? sum_value:
+    diff_value;
 
+  assign bus_escritura =
+    force_en ? force_in : result;
 
+  registro_4b registro_r0 (
+    .clk(clk),
+    .rst(rst),
+    .we (we0),
+    .din(),
+    .q  (r0)
+  );  
+
+  registro_4b registro_r1 (
+    .clk(clk),
+    .rst(rst),
+    .we (we1),
+    .din(),
+    .q  (r1)
+  );
+
+  registro_4b registro_r2 (
+    .clk(clk),
+    .rst(rst),
+    .we (we2),
+    .din(),
+    .q  (r2)
+  );
+
+  registro_4b registro_r3 (
+    .clk(clk),
+    .rst(rst),
+    .we (we3),
+    .din(),
+    .q  (r3)
+  );
 
   endmodule
 
