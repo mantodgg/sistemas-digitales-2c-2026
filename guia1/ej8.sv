@@ -1,4 +1,4 @@
-// lo hice para 4 bits aunque el enunciado pide que hay que hacerlo para N bits. no importa, la implementacion es parecida.
+// lo hice para 4 bits aunque el enunciado pide que hay que hacerlo para N bits (default en 3). no importa, la implementacion es parecida, funciona como inversor.
 
 module inversor_controlado (
     input logic [3:0] in,
