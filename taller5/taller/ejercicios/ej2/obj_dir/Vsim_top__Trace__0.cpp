@@ -16,7 +16,7 @@ void Vsim_top___024root__trace_chg_0(void* voidSelf, VerilatedVcd::Buffer* bufp)
     Vsim_top___024root__trace_chg_0_sub_0((&vlSymsp->TOP), bufp);
 }
 
-extern const VlUnpacked<CData/*1:0*/, 32> Vsim_top__ConstPool__TABLE_h3f10485d_0;
+extern const VlUnpacked<CData/*1:0*/, 32> Vsim_top__ConstPool__TABLE_h7a1c620d_0;
 
 void Vsim_top___024root__trace_chg_0_sub_0(Vsim_top___024root* vlSelf, VerilatedVcd::Buffer* bufp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vsim_top___024root__trace_chg_0_sub_0\n"); );
@@ -39,9 +39,9 @@ void Vsim_top___024root__trace_chg_0_sub_0(Vsim_top___024root* vlSelf, Verilated
     bufp->chgBit(oldp+10,(vlSelfRef.sim_top__DOT__tb__DOT__button));
     bufp->chgIData(oldp+11,(vlSelfRef.sim_top__DOT__tb__DOT__nfail),32);
     bufp->chgBit(oldp+12,(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__button_q));
-    bufp->chgCData(oldp+13,(Vsim_top__ConstPool__TABLE_h3f10485d_0
-                            [(((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__posicion) 
-                               << 3U) | (((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__button_q) 
+    bufp->chgCData(oldp+13,(Vsim_top__ConstPool__TABLE_h7a1c620d_0
+                            [(((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__button_q) 
+                               << 4U) | (((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__posicion) 
                                           << 2U) | (IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__controlador__DOT__current_state)))]),2);
 }
 

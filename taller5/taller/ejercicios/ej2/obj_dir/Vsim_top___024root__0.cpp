@@ -691,7 +691,7 @@ void Vsim_top___024root___trigger_clear__act(VlUnpacked<QData/*63:0*/, 1> &out) 
     } while ((1U > n));
 }
 
-extern const VlUnpacked<CData/*1:0*/, 32> Vsim_top__ConstPool__TABLE_h3f10485d_0;
+extern const VlUnpacked<CData/*1:0*/, 32> Vsim_top__ConstPool__TABLE_h7a1c620d_0;
 
 bool Vsim_top___024root___eval_phase__nba(Vsim_top___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vsim_top___024root___eval_phase__nba\n"); );
@@ -727,9 +727,9 @@ bool Vsim_top___024root___eval_phase__nba(Vsim_top___024root* vlSelf) {
                                          - (IData)(1U)));
                         }
                         vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__controlador__DOT__current_state 
-                            = Vsim_top__ConstPool__TABLE_h3f10485d_0
-                            [(((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__posicion) 
-                               << 3U) | (((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__button_q) 
+                            = Vsim_top__ConstPool__TABLE_h7a1c620d_0
+                            [(((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__button_q) 
+                               << 4U) | (((IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__posicion) 
                                           << 2U) | (IData)(vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__controlador__DOT__current_state)))];
                     }
                     vlSelfRef.sim_top__DOT__tb__DOT__dut__DOT__posicion 
