@@ -4,5 +4,5 @@ module porton_fsm_long (
     output logic subir, output logic bajar,
     output logic abierto, output logic cerrado
 );
-
+    
 endmodule
