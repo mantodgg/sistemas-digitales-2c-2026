@@ -24,10 +24,10 @@ module porton_fsm_long (
       next_state = current_state;
 
       unique case (current_state)
-        S0: if (button & posicion != 11) next_state = S1;
-        S1: next_state = S2;
-        S2: if (button & posicion != 00) next_state = S3;
-        S3: next_state = S0;
+        S0: if (button) next_state = S1;
+        S1: if (posicion != posicion != 2'b11)next_state = S2;
+        S2: if (button) next_state = S3;
+        S3: if (posicion != 2'b00) next_state = S0;
         default: next_state = S0;
       endcase
     end
