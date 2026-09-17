@@ -30,7 +30,7 @@ module porton_fsm (
     unique case (current_state)
       S0: if (button) next_state = S1;
       S1: next_state = S2;
-      S2: if (button) next_state = S2;
+      S2: if (button) next_state = S3;
       S3: next_state = S0;
       default: next_state = S0;
     endcase
@@ -40,6 +40,6 @@ module porton_fsm (
   assign abriendo = current_state == S1;
   assign abierto = current_state == S2;
   assign cerrando = current_state == S3;
-  
+
 endmodule
 
