@@ -15,3 +15,5 @@ module contador_posicion (
     end
   
 endmodule
+
+//no tiene sentido que haya que completar este de vuelta (no se puede importar ???)
