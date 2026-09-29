@@ -48,8 +48,39 @@ Cualquier lectura de R0 da 0 y cualquier escritura sobre R0 es ignorada. no impo
 
 ## Ejercicio 3
 
-En este ejercicio se conecta la ALU con reg_file
+En este ejercicio se conecta la ALU con reg_file.
 
+Tenemos primero un multiplexor que lo que hace es que si el we es 1 entonces que escriba rd y sino que apunte a rs1, que lee el operando. 
 
+[COMPLETAR]
 
+## Ejercicio 4
+
+El modulo registro_orden es un banco de 4 flip-flps. Los campos guardados no cambian al modificar las entrdas con la captura deshabilitada (capture_en = 0). En cada flanco ascendente con capture_en = 1, guarda rs1, rs2, rd y opcode en rs1_q, rs2_q, rd_q y op_q.
+
+Tenemos un reset asincrono, si el rst cambia a 1, no espera a un flanco del clock sino que instantaneamente entra a la rama del reset. Cuando entra a rst todos los registros pasan a 0. 
+
+## Ejercicio 5 
+
+En este ejercicio tenemos la FSM.
+
+Primero se define cada estado (IDLE, FETCH_OPS, EXECTUE, WRITEBACK).
+
+Luego establecemos que si reseteamos entonces el estado pasa a ser IDLE y sino el estado actual pasa a ser el siguiente.
+
+En el primer estado IDLE, si tenemos la señal start en 1, entonces pasamos al siguiente estado FETCH_OPS, sino nos quedamos en el mismo IDLE. Luego el resto de estados se van sucediendo sin ninguna condicion. FETCH_OPS -> EXECUTE -> WRITEBACK -> IDLE.
+
+En IDLE: la unidad está libre, por eso ready = 1. Todavia no termino nada (done=0) porque no está haciendo nada. Y capture_en = start: si en este preciso estado llega un start=1, se habilita la captura.
+
+En FETCH_OPS: la unidad acepto la orden y esta ocupada trayendo los operandos del banco. No puede aceptar otra orden (ready=0), no terminó (done=0), no hay nada que capturar de nuevo (capture_en=0, ya se capturó al entrar acá) y todavía no hay nada que escribir (rf_we=0).
+
+En EXECUTE: la ALU esta calculando con los operandos leidos. Sigue ocupada (ready=0), sigue sin terminar (done=0), y no tiene nada que capturar o escribir.
+
+En WRITEBACK: se cierra el ciclo. done=1 porque el resultado ya es valido en este ciclo. rf_we=1 porque es el momento de escribir ese resultado en el banco. ready sigue en 0 porque tecnicamente la unidad todavia esta en este estado.
+
+## Ejercicio 6
+
+Este ejercicio es unicamente conexion (cableado). Recibe las entradas y entrega las salidas. 
+
+[COMPLETAR RESPUESTAS DEL PDF]
 
