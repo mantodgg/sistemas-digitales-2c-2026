@@ -50,9 +50,36 @@ Cualquier lectura de R0 da 0 y cualquier escritura sobre R0 es ignorada. no impo
 
 En este ejercicio se conecta la ALU con reg_file.
 
-Tenemos primero un multiplexor que lo que hace es que si el we es 1 entonces que escriba rd y sino que apunte a rs1, que lee el operando. 
+Primero declaramos los cables regA_idx que es un cablde de 5 bits que lleva el numero de registro (0 a 31) que va a usar el puerto A del banco de registros. Luego rf_rs1_data y rf_rs2_data son cables de 32 bits, que llevan los numeros que lee el banco, uno por cada puerto. rf significa "register file" y rs1 y rs2 "primer y segundo operando", data "dato".
 
-[COMPLETAR]
+alu_if alu_io ();
+alu u_alu (.alu_io(alu_io));
+
+La primera linea lo que hace es crea una interfaz que es un paquete de cables agrupados. dentro tenemos operand_a, operand_b, opcode, result y flags. En vez de declarar una por una se declara toda desde alu_io.
+
+Luego la segunda lo que hace es crear la ALU, con el nombre u_alu, y la enchufa con este primer paquete de cables (de arriba).
+
+Tenemos un multiplexor que lo que hace es que si el we es 1 entonces que escriba rd y sino que apunte a rs1, que lee el operando.
+Es decir, el puerto A del banco tiene un solo indice y se usa para dos cosas. Mientras no se escribe, hay que leer rs1 que es el primer operando, sino se apunta a rd (destino), esta linea elige como dijimos antes, segun rf_we.
+
+Ahora creamos el banco de registros reg_file u_reg_file (). Entonces dividamos entre puerto A y B:
+
+Puerto A (lee rs1 y también escribe rd):
+.regA_idx(regA_idx): el índice sale del mux del bloque 3. (cuando esta leyendo rs1 y cuando esta escribiendo toma r2)
+.regA_din(result): lo que se escribiría por A es el result de la ALU.
+.regA_dout(rf_rs1_data): lo que el banco lee por A va al cable rf_rs1_data.
+.regA_we(rf_we): el permiso de escritura es rf_we. Es la misma señal que maneja el mux, por eso el índice y el permiso cambian juntos.
+
+Puerto B (solo lee rs2):
+
+.regB_idx(rs2): siempre apunta a rs2.
+.regB_dout(rf_rs2_data): lo leído va a rf_rs2_data.
+.regB_we(1'b0): el permiso de escritura está fijo en 0, nunca escribe.
+.regB_din(32'b0): como nunca escribe, el dato de entrada no importa, pero la patita pide algo, así que se le pone cero.
+
+Esto quiere decir que mientras el rf_we = 0 entonces ambos puertos leen (A a rs1 y B a rs2) y luego a la hora de la escritura (rf_we = 1) unicamente A escribe a rd y B sigue leyendo rs2. 
+
+Cuando pide verificar que R5 <- R1 + R2 con R1 = 10 y R2 = 20, basicamente nos esta diciendo que en el banco de registros quede R5 = 30. Y que luego quede R6 <- R5 - R1 entonces nos deberia quedar R6 = 20. Hay que hacerlo sin que se altere el origen 
 
 ## Ejercicio 4
 
@@ -82,5 +109,13 @@ En WRITEBACK: se cierra el ciclo. done=1 porque el resultado ya es valido en est
 
 Este ejercicio es unicamente conexion (cableado). Recibe las entradas y entrega las salidas. 
 
-[COMPLETAR RESPUESTAS DEL PDF]
+El top_module instancia la FSM, el registro de orden y el datapath:
+- La FSM recibe start y entrega ready y done (salidas externas) y capture_en y rf_we (internas).
+- El registro de orden recibe los campos externos (rs1, rs2, rd, opcode) y capture_en, y entrega la version capturada (rs1_q, rs2_q, rd_q, op_q).
+- El datapath recibe los campos capturados y rf_we, y entrega alu_flags. result queda interno.
+- clk y rst llegan a la FSM, al registro de orden y al banco (dentro del datapath). La ALU no los recibe porque es combinacional.
 
+Valores en R5 <- R1 + R2 (R1=10, R2=20):
+- FETCH_OPS: regA_idx=1, result todavia no valido.
+- EXECUTE: regA_idx=1, result=30.
+- WRITEBACK: regA_idx=5, result=30.
