@@ -1,0 +1,3 @@
+[1000] %Fatal: alu_tb.sv:40: Assertion failed in alu_tb.check: ALU op=0 A=0000000a B=00000014: resultado=00000000 flags=0000; esperado=0000001e 0000
+%Error: alu_tb.sv:40: Verilog $stop
+Aborting...
